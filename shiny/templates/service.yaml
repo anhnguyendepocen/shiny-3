@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "shiny.fullname" . }}
+  labels:
+    app: {{ template "shiny.name" . }}
+    chart: {{ template "shiny.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "shiny.name" . }}
+    release: {{ .Release.Name }}
