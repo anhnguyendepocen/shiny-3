@@ -1,3 +1,60 @@
 [submodule "shiny-apps/SP_Render"]
 	path = shiny-apps/SP_Render
 	url = https://gist.github.com/f9dd35b71dc3e73b845160018ecacea2.git
+[submodule "shiny-apps/Hothand"]
+	path = shiny-apps/Hothand
+	url = https://gist.github.com/94725c02cbc44488fad4e09e19bcb7e6.git
+[submodule "shiny-apps/Hierarchical_Models"]
+	path = shiny-apps/Hierarchical_Models
+	url = https://gist.github.com/47c01f1224017dc3ec53.git
+[submodule "shiny-apps/Heaping"]
+	path = shiny-apps/Heaping
+	url = https://gist.github.com/b0d5b2bc2af9bd6034d9.git
+[submodule "shiny-apps/3d_regression"]
+	path = shiny-apps/3d_regression
+	url = https://gist.github.com/bd0400c7ce3aacfa4973.git
+[submodule "shiny-apps/Corr_Reg_Game"]
+	path = shiny-apps/Corr_Reg_Game
+	url = https://gist.github.com/8e898319968d31b27310.git
+[submodule "shiny-apps/Sampling_Distribution"]
+	path = shiny-apps/Sampling_Distribution
+	url = https://gist.github.com/d7ed9873137267ee557b.git
+[submodule "shiny-apps/RandVarGen"]
+	path = shiny-apps/RandVarGen
+	url = https://gist.github.com/cc55e764b757d8729963.git
+[submodule "shiny-apps/Prob_View"]
+	path = shiny-apps/Prob_View
+	url = https://gist.github.com/200f26d243f4f5bb7334.git
+[submodule "shiny-apps/ANOVA_robust"]
+	path = shiny-apps/ANOVA_robust
+	url = https://gist.github.com/fad8ef712fc6f726640c.git
+[submodule "shiny-apps/t_Test"]
+	path = shiny-apps/t_Test
+	url = https://gist.github.com/48dc47f3ff436aba4b19.git
+[submodule "shiny-apps/WilcoxonMW"]
+	path = shiny-apps/WilcoxonMW
+	url = https://gist.github.com/8f525780393a05e7d0fd.git
+[submodule "shiny-apps/ChaosGame3D"]
+	path = shiny-apps/ChaosGame3D
+	url = https://gist.github.com/1d63ae1c5c5e3a4a5969.git
+[submodule "shiny-apps/ChaosGame2D"]
+	path = shiny-apps/ChaosGame2D
+	url = https://gist.github.com/d40a02fa87508ac5ac4b.git
+[submodule "shiny-apps/BenfordData"]
+	path = shiny-apps/BenfordData
+	url = https://gist.github.com/94fe941ab0d8a4f36d8b.git
+[submodule "shiny-apps/Gamblers_Ruin"]
+	path = shiny-apps/Gamblers_Ruin
+	url = https://gist.github.com/96f9adc5c37f4414fbd1.git
+[submodule "shiny-apps/BenfordSeq"]
+	path = shiny-apps/BenfordSeq
+	url = https://gist.github.com/f4475cbfe4cc77cef168.git
+[submodule "shiny-apps/MLE_Binomial"]
+	path = shiny-apps/MLE_Binomial
+	url = https://gist.github.com/8ace862e9e43f8e29d43.git
+[submodule "shiny-apps/LCO_CI_Generator"]
+	path = shiny-apps/LCO_CI_Generator
+	url = https://gist.github.com/d896c5848934484181be.git
+[submodule "shiny-apps/Longest_Run"]
+	path = shiny-apps/Longest_Run
+	url = https://gist.github.com/eee9a9e00dd4ddd68614.git
