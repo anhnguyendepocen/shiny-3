@@ -5,12 +5,12 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: calpolydatascience/shiny
+  tag: 0.1
   pullPolicy: IfNotPresent
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
 
 ingress:
