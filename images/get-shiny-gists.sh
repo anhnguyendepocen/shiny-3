@@ -1,8 +1,7 @@
-apt update
-apt install -y git
+#!/bin/bash
 cd /srv/shiny-server
 git clone https://gist.github.com/f9dd35b71dc3e73b845160018ecacea2.git SP_Render
-git clone https://gist.github.com/94725c02cbc44488fad4e09e19bcb7e6.git Hothand
+git clone https://gist.github.com/94725c02cbc44488fad4e09e19bcacb7e6.git Hothand
 git clone https://gist.github.com/47c01f1224017dc3ec53.git Hierarchical_Models
 git clone https://gist.github.com/b0d5b2bc2af9bd6034d9.git Heaping
 git clone https://gist.github.com/bd0400c7ce3aacfa4973.git 3d_regression
@@ -21,6 +20,4 @@ git clone https://gist.github.com/f4475cbfe4cc77cef168.git BenfordSeq
 git clone https://gist.github.com/8ace862e9e43f8e29d43.git MLE_Binomial
 git clone https://gist.github.com/d896c5848934484181be.git LCO_CI_Generator
 git clone https://gist.github.com/eee9a9e00dd4ddd68614.git Longest_Run
-apt remove -y git && \
-rm -rf /var/lib/apt/lists/*
 /usr/bin/shiny-server.sh
