@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - docker build -t shiny .
+    finally:
+      - echo This always runs even if the install command fails
+  post_build:
+    commands:
+      - echo `docker images`
