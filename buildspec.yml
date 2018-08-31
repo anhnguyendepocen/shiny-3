@@ -10,4 +10,6 @@ phases:
       - echo This always runs even if the install command fails
   post_build:
     commands:
-      - echo `docker images`
+      - docker tag shiny:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny:latest
+      - docker push 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny:latest
+
