@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - docker build -t shiny .
+      - docker build -t shiny ./images
     finally:
       - echo This always runs even if the install command fails
   post_build:
