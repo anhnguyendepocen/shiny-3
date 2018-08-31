@@ -1,11 +1,16 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region us-west-2)
+      - docker build -t shiny-base ./images/shiny-base
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - docker build -t shiny ./images
+      - docker build -t shiny ./images/shiny-deploy
     finally:
       - echo This always runs even if the install command fails
   post_build:
