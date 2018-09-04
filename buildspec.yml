@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - apt-get update -y
-      - apt-get install md5 -y
+      - apt-get install md5sum -y
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -12,8 +12,8 @@ phases:
       - cp install.R install.R.old
       - ./bootstrap.sh
       - |
-        file1=`md5 install.R`
-        file2=`md5 install.R.old`
+        file1=`md5sum install.R`
+        file2=`md5sum install.R.old`
 
         if [ "$file1" = "$file2" ]
         then
