@@ -5,7 +5,21 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region us-west-2)
-      - docker build -t shiny-base ./images/shiny-base
+      - cp install.R install.R.old
+      - ./bootstrap.sh
+      - |
+        file1=`md5 install.R`
+        file2=`md5 install.R.old`
+
+        if [ "$file1" = "$file2" ]
+        then
+            echo "No new dependecies"
+        else
+            echo "New dependecies building shiny-base"
+            docker build -t shiny-base ./images/shiny-base
+            docker tag shiny-base:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:latest
+            docker push 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:latest
+        fi
   build:
     commands:
       - echo Entered the build phase...
