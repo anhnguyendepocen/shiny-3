@@ -8,14 +8,16 @@ phases:
       - cd images/shiny-base
       - mv install.R install.R.old
       - ./bootstrap.sh
+      - echo $(cat install.R)
       - echo $(diff install.R install.R.old)
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - docker build -t shiny-base ./images/shiny-base
+      - docker build -t shiny-base .
   post_build:
     commands:
+      - echo Entered the post_build phase...
       - SHA=$(git log --abbrev-commit)
       - docker tag shiny-base:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:$SHA
       - docker tag shiny-base:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:latest
