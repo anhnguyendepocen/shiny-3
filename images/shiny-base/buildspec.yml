@@ -8,7 +8,7 @@ phases:
       - cd images/shiny-base
       - mv install.R install.R.old
       - ./bootstrap.sh
-      - diff install.R install.R.old
+      - echo $(diff install.R install.R.old)
   build:
     commands:
       - echo Entered the build phase...
