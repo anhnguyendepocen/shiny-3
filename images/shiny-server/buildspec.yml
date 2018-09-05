@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region us-west-2)
+      - cd images/shiny-server
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - docker build -t shiny-server .
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - SHA=$(git describe --always)
+      - docker tag shiny-server:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-server:$SHA
+      - docker tag shiny-server:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-server:latest
+      - docker push 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-server:$SHA
+      - docker push 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-server:latest
+
