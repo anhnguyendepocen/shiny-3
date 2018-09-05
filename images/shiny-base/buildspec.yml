@@ -6,20 +6,8 @@ phases:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region us-west-2)
       - cd images/shiny-base
-      - mv install.R install.R.old
-      - ./bootstrap.sh
-      - echo $(cat install.R)
-      - echo $(diff install.R install.R.old)
-      - |
-        grep -rh library ../../shiny-apps/* \
-        | sed "s/^[ \t]*//" \
-        | sed s/library//g \
-        | sed s/\"//g \
-        | sort -u \
-        | sed s/\(/'"'/g \
-        | sed s/\)/'",'/g \
-        | sed '$s/,$//' >> test.txt
-      - echo $(cat test.txt)
+      # - mv install.R install.R.old
+      # - ./bootstrap.sh
   build:
     commands:
       - echo Entered the build phase...
