@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region us-west-2)
+      - mv install.R install.R.old
+      - images/shiny-base/bootstrap.sh
+      - diff install.R install.R.old
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - docker build -t shiny-base ./images/shiny-base
+  post_build:
+    commands:
+      - SHA=$(git log --abbrev-commit)
+      - docker tag shiny-base:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:$SHA
+      - docker tag shiny-base:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:latest
+      - docker push 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:$SHA
+      - docker push 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:latest
+
