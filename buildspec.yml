@@ -19,6 +19,7 @@ phases:
         if true
         then
             echo "No new dependecies"
+            docker pull 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:latest
         else
             echo "New dependecies building shiny-base"
             docker build -t shiny-base ./images/shiny-base
