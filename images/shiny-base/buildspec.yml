@@ -16,7 +16,7 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - SHA=$(git log --abbrev-commit)
+      - SHA=$(git describe --always)
       - docker tag shiny-base:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:$SHA
       - docker tag shiny-base:latest 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:latest
       - docker push 822466877299.dkr.ecr.us-west-2.amazonaws.com/shiny-base:$SHA
