@@ -1,2 +1,4 @@
+![Build Status](https://codebuild.us-west-2.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiY1QvT05GK3FMN2dFOGd1M1hKelI0UWZpU3owTDEySVhlc2c0cTAxUU0zVGpMeGU2UHk1UFFjNzUyRzk1Z1g3aDVKaDVoZ1dBR1Q0MnNSTXN0RlQra2FzPSIsIml2UGFyYW1ldGVyU3BlYyI6IjZaVmxnMHJoVFowanlqWm4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
+
 # shiny
 Shiny Server - Container model to replace shiny.calpoly.edu
