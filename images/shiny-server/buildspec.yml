@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region us-west-2)
-      - mv shiny-apps images/shiny-server/shiny-apps
+      - mv shiny-apps images/shiny-server/
       - cd images/shiny-server
   build:
     commands:
