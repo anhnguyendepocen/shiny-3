@@ -15,7 +15,8 @@ phases:
         file1=`md5sum install.R`
         file2=`md5sum install.R.old`
 
-        if [ "$file1" = "$file2" ]
+        #if [ "$file1" = "$file2" ]
+        if true
         then
             echo "No new dependecies"
         else
