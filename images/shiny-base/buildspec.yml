@@ -5,8 +5,9 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region us-west-2)
+      - cd images/shiny-base
       - mv install.R install.R.old
-      - images/shiny-base/bootstrap.sh
+      - bootstrap.sh
       - diff install.R install.R.old
   build:
     commands:
