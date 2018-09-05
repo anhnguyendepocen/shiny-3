@@ -2,6 +2,7 @@
 
 # This sed madness searches all shiny-app dirs and consolidates dependencies
 #  into a single install.R file
+echo $(pwd)
 APP_DIR=../../shiny-apps
 echo "install.packages(c(" > install.R
 grep -rh library $APP_DIR/* \
